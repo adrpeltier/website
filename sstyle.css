@@ -1,0 +1,234 @@
+body {
+    background: linear-gradient(rgba(113, 132, 150, 1), rgba(129, 77, 125, 1));
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: rgba(57, 13, 47, 1);
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    margin-top: auto;
+}
+
+header {
+    padding: 20px;
+    align-items: center;
+}
+
+.top {
+    margin-top: 100px;
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.cercle {
+    width: 450px;
+    height: 450px;
+    background-color: rgba(57, 13, 47, 1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;	
+}
+
+.nav-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .top {
+        overflow: hidden;
+        justify-content: center; /* Centrer le cercle sur petit écran */
+    }
+
+    .carousel {
+        display: flex;
+        width: 100%;
+        transition: transform 0.5s ease;
+    }
+
+    .part {
+        min-width: 100%;
+        display: flex; /* S'assurer que le contenu est centré */
+        justify-content: center; /* Centrer le cercle dans son conteneur */
+    }
+
+    .nav-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .prev-btn {
+        left: 0;
+    }
+
+    .next-btn {
+        right: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .top .carousel, .bottom {
+        flex-direction: row;
+        justify-content: center; /* Centrer les cercles horizontalement */
+    }
+    .part {
+        margin: 0 12.5px; /* Espacement de 25px entre les cercles */
+        display: flex; /* Assure que le contenu est centré dans chaque part */
+        justify-content: center; /* Centrer le contenu */
+        align-items: center; /* Aligner le contenu verticalement */
+    }
+}
+
+.titre {
+    font-family: "Wendy One", sans-serif;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+
+.logo {
+    color: white;
+    font-family: "Wendy One", sans-serif;
+    text-align: center;
+}
+
+.fontlogo {
+    width: 15%;
+    height: 60px;
+    background-color: rgba(57, 13, 47, 1);
+    position: absolute;
+    left: 42.5%;
+    top: 15px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.conexion {
+    background-color: rgba(57, 13, 47, 1);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 20%;
+    top: 15px;
+    right: 30px;
+}
+
+footer p {
+    color: white;
+    font-family: "Athiti", sans-serif;
+}
+
+.menu {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    font-family: "Athiti", sans-serif;
+    z-index: 1;
+}
+
+.menu-button {
+    background-color: rgba(57, 13, 47, 1);
+    color: white;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 20%;
+}
+
+.dropdown {
+    max-height: 0; 
+    overflow: hidden; 
+    transition: max-height 0.3s ease-out; 
+    background-color: rgba(57, 13, 47, 1);
+    position: absolute;
+    z-index: 11;
+}
+
+.dropdown a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: rgba(57, 13, 47, 1);
+    opacity: 0.5;
+}
+
+.dropdown.show {
+    max-height: 200px; 
+}
+
+.menu:hover .dropdown {
+    max-height: 200px; 
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Blog and Projects Section */
+.blog-section, .projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.blog-post, .project {
+    background-color: rgba(57, 13, 47, 1);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.blog-post h2, .project h2 {
+    color: white;
+    font-family: "Athiti", sans-serif;
+}
+
+.blog-post p, .project p {
+    color: white;
+    font-family: "Athiti", sans-serif;
+}
+
+.blog-post a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
